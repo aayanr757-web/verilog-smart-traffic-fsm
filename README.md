@@ -37,6 +37,26 @@ Each state lasts five clock cycles before transitioning to the next state.
 
 ## Verification
 
+## Adaptive Vehicle-Sensor Control
+
+The controller uses North-South and East-West vehicle
+sensors to adjust green-light duration.
+
+- Minimum green duration: 5 clock cycles
+- Maximum green duration: 10 clock cycles
+- Opposite-road vehicle requests can shorten green time
+- Four-state finite state machine
+
+## Verification Results
+
+- North-South adaptive timing: PASS
+- East-West adaptive timing: PASS
+- Reset functionality: PASS
+- Total: 3 passed, 0 failed
+
+![Adaptive Test Results](Traffic_FSM_Adaptive_Tests_Passed.png)
+
+![Adaptive Waveform](Traffic_FSM_Adaptive_Waveform.png)
 Simulation performed using Icarus Verilog on EDA Playground.
 
 **Results: 5 tests passed, 0 failed.**
